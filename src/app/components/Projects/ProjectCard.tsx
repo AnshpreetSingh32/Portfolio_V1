@@ -22,19 +22,20 @@ const item = {
 
 export const ProjectCard = ({ projectData }: Props) => {
   return (
-    <MotionDiv className="relative flex flex-col gap-3 sm:max-w-sm rounded-2xl">
+    <MotionDiv className="relative flex flex-col gap-3 sm:max-w-sm rounded-2xl bg-green-300">
       <div className="relative flex-col gap-4">
         <Image
           src={projectData.image}
           alt={`${projectData.name} image`}
           width={448}
           height={280}
+          className="rounded-t-xl"
         />
         <MotionDiv
           initial="initial"
           animate="initial"
           whileHover="animate"
-          className="absolute left-0 top-0 z-10 flex h-full w-full items-end bg-black bg-opacity-80 p-3 opacity-0 transition hover:opacity-100 md:hidden"
+          className="absolute left-0 top-0 z-10 flex h-full w-full items-end bg-black bg-opacity-80 p-3 opacity-0 transition hover:opacity-100 md:hidden rounded-t-xl"
         >
           <MotionNav
             variants={item}
