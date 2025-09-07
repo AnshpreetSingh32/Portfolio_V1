@@ -22,12 +22,12 @@ const item = {
 
 export const ProjectCard = ({ projectData }: Props) => {
   return (
-    <MotionDiv className="relative flex flex-col gap-3 sm:max-w-sm rounded-2xl bg-green-300">
+    <MotionDiv className="relative flex flex-col gap-2 rounded-xl hover:shadow-md dark:hover:shadow-white sm:max-w-sm">
       <div className="relative flex-col gap-4">
         <Image
           src={projectData.image}
           alt={`${projectData.name} image`}
-          width={448}
+          width={600}
           height={280}
           className="rounded-t-xl"
         />
@@ -35,7 +35,7 @@ export const ProjectCard = ({ projectData }: Props) => {
           initial="initial"
           animate="initial"
           whileHover="animate"
-          className="absolute left-0 top-0 z-10 flex h-full w-full items-end bg-black bg-opacity-80 p-3 opacity-0 transition hover:opacity-100 md:hidden rounded-t-xl"
+          className=" absolute left-0 top-0 z-10 flex h-full w-full items-end bg-black bg-opacity-80 p-3 rounded-xl opacity-0 transition hover:opacity-100"
         >
           <MotionNav
             variants={item}
@@ -64,31 +64,10 @@ export const ProjectCard = ({ projectData }: Props) => {
             )}
           </MotionNav>
         </MotionDiv>
-        <div className="absolute left-0 top-0 z-10 hidden h-full w-full items-end bg-black bg-opacity-80 p-3 opacity-0 transition hover:opacity-100 md:flex">
-          <nav className="flex items-center gap-x-4">
-            <a
-              target="_blank"
-              href={projectData.repo}
-              className="rounded-lg bg-textLight p-3 text-black transition hover:text-target sm:p-2"
-              rel="noreferrer"
-            >
-              <Code2 />
-            </a>
-            {projectData.url && (
-              <a
-                target="_blank"
-                href={projectData.url}
-                className="rounded-lg bg-textLight p-3 text-black transition hover:text-target sm:p-2"
-                rel="noreferrer"
-              >
-                <ExternalLink />
-              </a>
-            )}
-          </nav>
-        </div>
+       
       </div>
-      <div className="flex flex-col gap-4">
-        <h3 className="text-2xl font-bold">{projectData.name}</h3>
+      <div className="flex flex-col gap-4 p-3">
+        <h3 className="text-center text-2xl font-bold">{projectData.name}</h3>
         <p className="text-lg">{projectData.description}</p>
         <div className="flex flex-wrap gap-3">
           {projectData.tags.map((tag, index) => (

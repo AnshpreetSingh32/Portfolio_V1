@@ -53,12 +53,20 @@ export const ThemeSwitcher = () => {
       >
         <Menu.Items
           as="ul"
-          className="absolute right-0 mt-6 flex w-52 flex-col overflow-hidden rounded-lg bg-secondary py-2 sm:mt-2 sm:bg-secondaryHover"
+          className="absolute right-0 mt-6 flex w-52 flex-col overflow-hidden rounded-lg bg-secondary sm:mt-2 sm:bg-secondaryHover"
         >
           {Themes.map((themeInfo, index) => (
             <Menu.Item key={index} as="li">
               <button
-                onClick={() => setTheme(themeInfo.label.toLowerCase())}
+                onClick={() => {
+                  const newTheme = themeInfo.label.toLowerCase()
+                  setTheme(newTheme)
+                  if (newTheme === 'dark') {
+                    document.documentElement.classList.add('dark')
+                  } else {
+                    document.documentElement.classList.remove('dark')
+                  }
+                }}
                 className={`${
                   themeInfo.label.toLowerCase() !== 'system' &&
                   theme === themeInfo.label.toLowerCase()

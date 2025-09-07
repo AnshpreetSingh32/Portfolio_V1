@@ -3,7 +3,7 @@ export const navigationLinks = [
   { label: 'About Me', path: '#about' },
   { label: 'Projects', path: '#projects' },
   { label: 'Skills', path: '#skills' },
-  { label: 'Contact', path: '#contact' },
+  { label: 'Contact', path: '#contact' }
 ]
 
 export type projectType = {
@@ -94,6 +94,22 @@ export const projectsData: projectType[] = [
 
 export const skillsData = [
   {
+    img: 'java/java-original.svg',
+    name: 'Java'
+  },
+  {
+    img:'cplusplus/cplusplus-original.svg',
+    name: 'C++'
+  },
+  {
+    img: 'python/python-original.svg',
+    name: 'Python'
+  },
+  {
+    img:'linux/linux-original.svg',
+    name: 'Linux'
+  },
+  {
     img: 'html5/html5-original.svg',
     name: 'HTML'
   },
@@ -106,24 +122,16 @@ export const skillsData = [
     name: 'JavaScript'
   },
   {
-    img: 'sass/sass-original.svg',
-    name: 'Sass'
-  },
-  {
     img: 'typescript/typescript-original.svg',
     name: 'TypeScript'
   },
   {
+    img: 'nextjs/nextjs-original.svg',
+    name: 'Next.js'
+  },
+  {
     img: 'react/react-original.svg',
     name: 'React'
-  },
-  {
-    img: 'tailwindcss/tailwindcss-original.svg',
-    name: 'Tailwindcss'
-  },
-  {
-    img: 'nextjs/nextjs-original.svg',
-    name: 'Nextjs'
   },
   {
     img: 'nodejs/nodejs-original.svg',
@@ -131,14 +139,34 @@ export const skillsData = [
   },
   {
     img: 'express/express-original.svg',
-    name: 'Express'
+    name: 'Express.js'
   },
   {
-    img: 'postgresql/postgresql-original.svg',
-    name: 'PostgreSQL'
+    img: 'tailwindcss/tailwindcss-original.svg',
+    name: 'Tailwindcss'
+  },
+  {
+    img: 'bootstrap/bootstrap-original.svg',
+    name: 'Bootstrap'
+  },
+  {
+    img: 'mysql/mysql-original.svg',
+    name: 'MySQL'
+  },
+  {
+    img: 'mongodb/mongodb-original.svg',
+    name: 'MongoDB'
   },
   {
     img: 'git/git-original.svg',
     name: 'Git'
+  },
+  {
+    img: 'github/github-original.svg',
+    name: 'GitHub'
+  },
+  {
+    img: 'figma/figma-original.svg',
+    name: 'Figma'
   }
 ]

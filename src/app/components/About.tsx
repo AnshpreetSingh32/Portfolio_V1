@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
-import { MotionDiv } from '../lib/motion';
-import { SectionContainer } from './SectionContainer';
+import { MotionDiv } from '../lib/motion'
+import { SectionContainer } from './SectionContainer'
 
-import { MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react'
 
 export const About = () => {
   return (
@@ -17,12 +17,13 @@ export const About = () => {
           className="flex max-w-2xl flex-col gap-6 text-xl md:text-center sm:text-lg"
         >
           <p>
-Hello, I'm Anshpreet Singh. I'm a passionate full-stack developer and Computer Science student. I build projects using React.js, Node.js, and Express.js, and have internship experience from Fidelity International.
+            Hello, I'm Anshpreet Singh. I'm a passionate full-stack developer
+            and Computer Science student. I build projects using React.js,
+            Node.js, and Express.js, and have internship experience from
+            Fidelity International.
           </p>
 
-          <p>
-            Currently studying, practicing, and seeking new opportunities.
-          </p>
+          <p>Currently studying, practicing, and seeking new opportunities.</p>
           <MotionDiv className="flex justify-start md:justify-center">
             <Link
               href="#contact"
@@ -58,5 +59,5 @@ Hello, I'm Anshpreet Singh. I'm a passionate full-stack developer and Computer S
         </MotionDiv>
       </div>
     </SectionContainer>
-  );
-};
+  )
+}

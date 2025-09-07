@@ -35,21 +35,23 @@ export const Skills = () => {
         className="flex flex-wrap justify-center gap-8"
       >
         {skillsData.map((skill, index) => (
-          <MotionDiv
-            variants={item}
-            transition={{ duration: 0.3 }}
-            key={index}
-            className="flex items-center gap-3 rounded-lg bg-secondary px-4 py-2 font-bold"
-          >
-            <Image
-              src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.img}`}
-              alt={skill.name}
-              width={40}
-              height={40}
-              className="sm:h-8 sm:w-8"
-            />
-            {skill.name}
-          </MotionDiv>
+          <div className="hover:scale-105">
+            <MotionDiv
+              variants={item}
+              transition={{ duration: 0.3 }}
+              key={index}
+              className="flex items-center gap-3 rounded-lg bg-secondary px-4 py-2 font-bold hover:bg-secondaryHover"
+            >
+              <Image
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.img}`}
+                alt={skill.name}
+                width={40}
+                height={40}
+                className="hover:animate-spin sm:h-8 sm:w-8"
+              />
+              <p>{skill.name}</p>
+            </MotionDiv>
+          </div>
         ))}
       </MotionDiv>
     </SectionContainer>

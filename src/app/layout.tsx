@@ -7,11 +7,8 @@ import Providers from './providers'
 const saira = Saira({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Portfólio | Daniel Grazziotti',
-  description: 'Portfólio de Daniel Grazziotti',
-  verification: {
-    google: 'NK_YRyzH-6vt7WN_fUlh27kl9Rbv60jNBhDY_H7oLb8'
-  }
+  title: 'Portfolio | Anshpreet Singh',
+  description: 'Anshpreet Singh@apos Portfolio',
 }
 export default function RootLayout({
   children

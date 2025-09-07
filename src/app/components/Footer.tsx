@@ -6,11 +6,11 @@ const iconSize = { width: 28, height: 28 }
 
 const socialData = [
   {
-    link: 'https://github.com/grazziotti',
+    link: 'https://github.com/AnshpreetSingh32',
     icon: <Github width={iconSize.width} height={iconSize.height} />
   },
   {
-    link: 'https://www.linkedin.com/in/daniel-grazziotti/',
+    link: 'https://www.linkedin.com/in/Anshpreetsingh32',
     icon: <Linkedin width={iconSize.width} height={iconSize.height} />
   }
 ]
@@ -27,9 +27,9 @@ export const Footer = () => {
           hidden: { opacity: 0 },
           visible: { opacity: 1 }
         }}
-        className="mx-auto flex w-full max-w-5xl items-center justify-between border-t py-8 text-lg sm:flex-col sm:gap-y-6"
+        className="mx-auto flex w-full max-w-5xl items-center justify-between border-t hover:border-target py-8 text-lg sm:flex-col sm:gap-y-6"
       >
-        <p>© 2023 / Daniel Grazziotti</p>
+        <p>© 2025 / Anshpreet Singh</p>
         <div className="flex items-center gap-4">
           {socialData.map((social, index) => (
             <a

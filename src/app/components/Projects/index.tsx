@@ -91,7 +91,7 @@ export const Projects = () => {
             className="flex items-center gap-x-2 rounded-lg text-lg transition hover:bg-opacity-80 hover:text-target"
             onClick={() => setShowMore(!showMore)}
           >
-            Mostrar {showMore ? 'Menos' : 'Mais'}{' '}
+            Show {showMore ? 'Less' : 'More'}{' '}
             <MoveDown
               width={20}
               height={20}

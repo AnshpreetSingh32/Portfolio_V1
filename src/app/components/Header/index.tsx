@@ -12,7 +12,7 @@ export const Header = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className="fixed z-30 w-full bg-primary px-10 sm:px-6"
+      className="fixed z-30 w-full bg-primary px-10 sm:px-6 hover:border-b-2 border-target/90"
     >
       <div className="mx-auto max-w-5xl">
         <div className="flex h-24 items-center justify-between sm:hidden">

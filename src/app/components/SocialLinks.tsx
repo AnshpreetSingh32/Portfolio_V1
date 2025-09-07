@@ -1,10 +1,12 @@
+import { link } from 'fs'
 import { MotionDiv } from '../lib/motion'
 
-import { Github, Linkedin } from 'lucide-react'
+import { Github, Linkedin, Mails } from 'lucide-react'
 
 export const socialData = [
-  { link: 'https://github.com/AnshpreetSingh32', icon: <Github /> },
-  { link: 'https://www.linkedin.com/in/Anshpreetsingh32', icon: <Linkedin /> }
+  {link: 'mailto:anshpreetsingh3232@gmail.com', icon: <Mails />},
+  { link: 'https://www.linkedin.com/in/Anshpreetsingh32', icon: <Linkedin /> },
+  { link: 'https://github.com/AnshpreetSingh32', icon: <Github /> }
 ]
 
 export const SocialLinks = () => {
@@ -13,7 +15,7 @@ export const SocialLinks = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="fixed bottom-0 left-10 flex flex-col items-center gap-y-4 md:hidden"
+      className="fixed bottom-0 flex flex-col items-center gap-y-4 sm:left-1 md:left-4"
     >
       {socialData.map((social, index) => (
         <a

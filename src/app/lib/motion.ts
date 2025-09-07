@@ -8,3 +8,4 @@ export const MotionNav = motion.div
 export const MotionH1 = motion.h1
 export const MotionH2 = motion.h2
 export const MotionP = motion.p
+export const MotionSpan = motion.span

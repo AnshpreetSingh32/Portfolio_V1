@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
-  darkMode: ['class', "data-theme='dark'"],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
@@ -18,6 +18,9 @@ const config: Config = {
       }
     },
     screens: {
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
       md: { max: '865px' },
       sm: { max: '670px' }
     }
