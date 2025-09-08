@@ -1,6 +1,6 @@
 import { MotionDiv, MotionH1, MotionSpan } from '../lib/motion'
-import { ActionButtons } from './ActionButtons'
-import { EmailBtn } from './EmailBtn'
+import { ActionButtons, ActionButton } from './ActionButtons'
+import { Eye, FileText } from 'lucide-react'
 import { TypewriterLoop } from './custom/typewriter-loop'
 import { useMemo } from 'react'
 import { greeting, visitors } from '../utils/greetings'
@@ -63,7 +63,25 @@ export const Hero = () => {
             }}
             className="mt-4"
           >
-            <ActionButtons />
+            {/** Define the buttons array here and pass as prop */}
+            <ActionButtons
+              buttons={[
+                {
+                  label: 'My Work',
+                  hoverText: 'Projects',
+                  type: 'scroll',
+                  target: '#projects',
+                  icon: <Eye size={20} />
+                },
+                {
+                  label: 'Resume',
+                  hoverText: '❯❯❯❯',
+                  type: 'link',
+                  target: 'https://drive.google.com/your-resume-link',
+                  icon: <FileText size={20} />
+                }
+              ]}
+            />
           </MotionDiv>
         </div>
       </MotionDiv>

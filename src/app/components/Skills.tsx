@@ -32,7 +32,7 @@ export const Skills = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex flex-wrap justify-center gap-8"
+        className="flex flex-wrap justify-center gap-8 w-full"
       >
         {skillsData.map((skill, index) => (
           <div className="hover:scale-105">

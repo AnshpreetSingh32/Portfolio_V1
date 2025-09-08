@@ -15,7 +15,7 @@ export const SocialLinks = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="fixed bottom-0 flex flex-col items-center gap-y-4 sm:left-1 md:left-4"
+      className="fixed bottom-0 flex flex-col items-center gap-y-4 sm:left-1 md:left-4 lg:left-4"
     >
       {socialData.map((social, index) => (
         <a

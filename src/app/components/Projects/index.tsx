@@ -48,7 +48,7 @@ export const Projects = () => {
 
   return (
     <SectionContainer id="projects" title="Projects">
-      <div ref={ref}>
+      <div ref={ref} className='mx-auto max-w-5xl'>
         <MotionDiv
           variants={container}
           initial="hidden"

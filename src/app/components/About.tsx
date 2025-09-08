@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import image from '../assets/About_Image.png'
 
 import { MotionDiv } from '../lib/motion'
 import { SectionContainer } from './SectionContainer'
@@ -8,18 +10,17 @@ import { MoveRight } from 'lucide-react'
 export const About = () => {
   return (
     <SectionContainer id="about" title="About Me">
-      <div className="flex items-center justify-between md:justify-center">
+      <div className="flex flex-row items-center justify-between md:justify-center max-w-5xl mx-auto md:flex-col-reverse md:gap-8">
         <MotionDiv
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.3 }}
-          className="flex max-w-2xl flex-col gap-6 text-xl md:text-center sm:text-lg"
+          className="flex max-w-xl flex-col gap-6 text-xl md:text-center sm:text-lg"
         >
           <p>
-            Hello, I'm Anshpreet Singh. I'm a passionate full-stack developer
-            and Computer Science student. I build projects using React.js,
-            Node.js, and Express.js, and have internship experience from
+            Hello, I'm <span className='text-target'>Anshpreet Singh</span>. I'm a passionate full-stack developer
+            and Computer Science student. I build projects using Next.js and Node.js, and have internship experience from
             Fidelity International.
           </p>
 
@@ -38,23 +39,17 @@ export const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.3 }}
-          className="flex flex-1 justify-end pl-8 md:hidden"
+          className="flex flex-1 justify-center "
         >
-          <div className="w-80 pb-10">
-            <div className="flex flex-wrap justify-center gap-4 opacity-70">
-              <span className="h-3 w-48 rounded-full bg-target"></span>
-              <span className="h-3 w-32 rounded-full bg-secondaryHover"></span>
-              <span className="h-3 w-20 rounded-full bg-target"></span>
-              <span className="h-3 w-28 rounded-full bg-target"></span>
-              <span className="h-3 w-14 rounded-full bg-secondaryHover"></span>
-              <span className="h-3 w-20 rounded-full bg-target"></span>
-              <span className="h-3 w-32 rounded-full bg-target"></span>
-              <span className="h-3 w-32 rounded-full bg-secondaryHover"></span>
-              <span className="h-3 w-32 rounded-full bg-secondaryHover"></span>
-              <span className="h-3 w-20 rounded-full bg-target"></span>
-              <span className="h-3 w-28 rounded-full bg-target"></span>
-              <span className="h-3 w-14 rounded-full bg-secondaryHover"></span>
-            </div>
+          <div className="relative w-80 h-96 md:w-80 md:h-96">
+            <Image
+              src={image}
+              alt="Anshpreet Singh - Full Stack Developer"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 768px) 256px, 320px"
+            />
           </div>
         </MotionDiv>
       </div>

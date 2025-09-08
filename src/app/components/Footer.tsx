@@ -27,9 +27,12 @@ export const Footer = () => {
           hidden: { opacity: 0 },
           visible: { opacity: 1 }
         }}
-        className="mx-auto flex w-full max-w-5xl items-center justify-between border-t hover:border-target py-8 text-lg sm:flex-col sm:gap-y-6"
+        className="mx-auto flex w-full max-w-5xl items-center justify-between border-t hover:border-target py-4 text-lg sm:flex-col sm:gap-y-6"
       >
-        <p>© 2025 / Anshpreet Singh</p>
+        <div className='flex flex-col gap-2 text-md text-center sm:text-left'>
+        <p>Made with ❤️ from INDIA</p>
+        <p>No &copy; issues, Feel free to copy</p>
+        </div>
         <div className="flex items-center gap-4">
           {socialData.map((social, index) => (
             <a

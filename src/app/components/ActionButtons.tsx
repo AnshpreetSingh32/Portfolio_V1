@@ -5,7 +5,7 @@ import { Eye, FileText, Link} from 'lucide-react' // icons
 import { useRouter } from 'next/navigation'
 import { ReactNode } from "react";
 
-interface ActionButton {
+export interface ActionButton {
   label: string
   hoverText: string
   type: 'scroll' | 'link'
@@ -13,24 +13,11 @@ interface ActionButton {
   icon: React.ReactNode
 }
 
-const actionButtons: ActionButton[] = [
-  {
-    label: 'My Work',
-    hoverText: 'Projects',
-    type: 'scroll',
-    target: '#projects', // section id
-    icon: <Eye size={20} />
-  },
-  {
-    label: 'Resume',
-    hoverText: '❯❯❯❯',
-    type: 'link',
-    target: 'https://drive.google.com/your-resume-link', // replace with actual link
-    icon: <FileText size={20} />
-  }
-]
+interface ActionButtonsProps {
+  buttons: ActionButton[]
+}
 
-export const ActionButtons = () => {
+export const ActionButtons = ({ buttons }: ActionButtonsProps) => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId.substring(1))
     if (section) {
@@ -48,7 +35,7 @@ export const ActionButtons = () => {
 
   return (
     <div className="flex gap-4 mt-6 flex-wrap">
-      {actionButtons.map((btn, index) => (
+  {buttons.map((btn, index) => (
         <button
           key={index}
           onClick={() => {

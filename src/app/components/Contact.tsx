@@ -6,6 +6,8 @@ import { SectionContainer } from './SectionContainer'
 import { FormEvent, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import toast, { Toaster } from 'react-hot-toast'
+import {FileText, PhoneCallIcon, MessageCircleMoreIcon } from 'lucide-react'
+import { ActionButtons } from './ActionButtons'
 
 
 export const Contact = () => {
@@ -69,33 +71,74 @@ export const Contact = () => {
     <SectionContainer id="contact" title="Contact">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <MotionDiv
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.3 }}
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1,  x: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
-        className="space-y-6 self-start lg:pr-12"
+        className="space-y-6 self-start"
       >
-        <h2 className="text-2xl font-bold leading-tight">
+        <div className='mb-16'>
+        <h2 className="text-2xl font-bold leading-tight mb-2">
               Let's Build Something<br />
               Awesome - <span className="text-target">Message Me!</span>
             </h2>
-            <p className="text-lg max-w-xl">
+            <p className="text-lg max-w-xl mb-6">
               I'd love to hear from you! Whether you have a project idea, need help
               with software development, or just want to connect and chat about
               tech, feel free to reach out.
             </p>
             <EmailBtn />
+            <ActionButtons
+              buttons={[
+                {
+                  label: '+91-9814893232',
+                  hoverText: 'Call Me',
+                  type: 'link',
+                  target: 'tel:+91-9814893232',
+                  icon: <PhoneCallIcon size={20} />
+                }
+              ]}
+            />
+            <ActionButtons
+              buttons={[
+               {
+                  label: 'Whatsapp',
+                  hoverText: 'Message me',
+                  type: 'link',
+                  target: 'https://wa.me/919814893232',
+                  icon: <MessageCircleMoreIcon size={20} />
+                }
+              ]}
+            />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold leading-tight mb-2">
+              Why Hire me <span className="text-target">?</span>
+            </h3>
+            <p className='text-lg'>I deliver robust full-stack apps with React.js and Node.js, automating real workflows and crafting seamless user experiences for enterprise solutions.</p>
+            <ActionButtons
+              buttons={[
+                {
+                  label: 'Resume',
+                  hoverText: '❯❯❯❯',
+                  type: 'link',
+                  target: 'https://drive.google.com/your-resume-link',
+                  icon: <FileText size={20} />
+                }
+              ]}
+            />
+          </div>
       </MotionDiv>
   <MotionDiv
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-    className="rounded-lg p-8 shadow-lg bg-secondary w-full self-start dark:shadow-gray-50"
+            transition={{ delay:0.5, duration: 0.5 }}
+    className="rounded-xl p-8  shadow-lg bg-secondary w-full self-start dark:shadow-gray-50"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+                <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
                 <label htmlFor="name" className="block text-sm mb-2">
                   Full Name
                 </label>
@@ -112,7 +155,7 @@ export const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm mb-2">
+                <label htmlFor="email" className="block text-md mb-2">
                   Email Address
                 </label>
                 <input
@@ -127,8 +170,8 @@ export const Contact = () => {
                 />
               </div>
               
-              <div>
-                <label htmlFor="message" className="block text-sm mb-2">
+              <div className='pb-8'>
+                <label htmlFor="message" className="block text-md mb-2">
                   Message
                 </label>
                 <textarea
@@ -145,7 +188,7 @@ export const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full bg-target hover:bg-target/90 font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-target hover:bg-target/90 font-medium py-3 px-6 rounded-lg transition-colors duration-200 "
               >
                 SEND MESSAGE
               </button>
