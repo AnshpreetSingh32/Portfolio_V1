@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from './utils'
 
 export const TypewriterEffectSmooth = ({
   words,
@@ -28,7 +28,7 @@ export const TypewriterEffectSmooth = ({
       const pauseTimer = setTimeout(() => {
         setIsPaused(false)
         setIsDeleting(true)
-      }, 2000) // Pause for 2 seconds before deleting
+      }, 3000) // Pause for 3 seconds before deleting
       return () => clearTimeout(pauseTimer)
     }
 
@@ -55,7 +55,7 @@ export const TypewriterEffectSmooth = ({
           }
         }
       },
-      isDeleting ? 50 : 100
+      isDeleting ? 100 : 100
     ) // Faster deletion, slower typing
 
     return () => clearTimeout(timer)

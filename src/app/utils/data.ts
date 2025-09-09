@@ -1,6 +1,9 @@
+
 export const navigationLinks = [
   { label: 'Home', path: '#home' },
   { label: 'About Me', path: '#about' },
+  { label: 'Experience', path: '#experience' },
+  { label: 'Education', path: '#education' },
   { label: 'Projects', path: '#projects' },
   { label: 'Skills', path: '#skills' },
   { label: 'Contact', path: '#contact' }
@@ -17,79 +20,52 @@ export type projectType = {
 
 export const projectsData: projectType[] = [
   {
-    name: 'Countries App',
-    repo: 'https://github.com/grazziotti/rest-countries-api',
-    url: 'https://rest-countries-api-grazziotti.vercel.app/',
+    name: 'Nex-Migrate',
+    repo: 'https://github.com/AnshpreetSingh32/Nex_Migrate_Hosted.git',
+    url: 'https://nex-migrate.netlify.app/',
     image:
-      'https://i.ibb.co/b69XhBD/Screenshot-2023-07-11-at-22-26-22-REST-Countries-API.png',
+      '/assets/Nex-Migrate.png',
     description:
-      'The Countries App is a web application that provides information about different countries around the world.',
-    tags: ['react', 'typescript', 'styled-components', 'axios', 'api']
+      'A full-stack web portal simulating Windows 11 migration with Nexthink-like insights. Features admin/user dashboards, eligibility logic, migration triggers, ServiceNow automation, and secure JWT-based authentication for enterprise workflow simulation.',
+    tags: ['React.js', 'Node.js', 'MySQL', 'Tailwind CSS', 'JWT', 'ServiceNow API', 'Nexthink', 'Nodemailer']
   },
   {
-    name: 'Space Tourism Website',
-    repo: 'https://github.com//grazziotti/space-tourism-website',
-    url: 'https://space-tourism-website-grazziotti.vercel.app/',
+    name: 'Whats Cooking',
+    repo: 'https://github.com/AnshpreetSingh32/Whats-Cooking.git',
+    url: 'https://whats-cooking-v1.netlify.app/',
     image:
-      'https://i.ibb.co/c17p422/Screenshot-2023-07-16-at-00-54-48-Space-Tourism-Website.png',
-    description: 'Multi-page website with a space theme.',
-    tags: ['react', 'typescript', 'styled-components']
+      '/assets/Whats-Cooking.png',
+    description: 'A recipe discovery app built with React.js and Tailwind CSS. Uses TheMealDB API for ingredient-based search, random recipes, cuisine filters, responsive UI, and detailed recipe pages with error handling.',
+    tags: ['React.js', 'Tailwind CSS', 'MealDB api']
   },
   {
-    name: 'Interactive Comments Section',
-    repo: 'https://github.com/grazziotti/interactive-comments-section',
-    url: 'https://interactive-comments-section-eta.vercel.app/',
+    name: 'Personal Portfolio',
+    repo: 'https://github.com/AnshpreetSingh32/Portfolio_V1.git',
+    url: 'https://github.com/AnshpreetSingh32/Portfolio_V1.git',
     image:
-      'https://i.ibb.co/4WNm2qY/Screenshot-2023-07-14-at-23-31-53-Frontend-Mentor-Interactive-comments-section.png',
-    description: 'Interactive comments section. CRUD. Client-side.',
-    tags: ['react', 'typescript', 'styled-components']
+      '/assets/Portfolio_Image.png',
+    description: 'A modern portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Headless UI. Showcases projects, skills, and experience with smooth animations, responsive design, and an engaging user interface.',
+    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwind CSS', 'Framer Motion', 'Headless UI']
   },
   {
-    name: 'Comment API',
-    repo: 'https://github.com/grazziotti/comment-api',
+    name: 'Video On Demand',
+    repo: 'https://github.com/AnshpreetSingh32/Video_On_demand.git',
     url: false,
     image:
-      'https://i.ibb.co/BKRLTZx/Screenshot-2024-03-05-at-23-44-09-Swagger-UI.png',
-    description: 'REST API for comments.',
-    tags: ['express', 'api', 'backend', 'nodejs', 'typescript']
+      '/assets/Video-on-Demand.png',
+    description: 'A Netflix-inspired Java Swing application with OTP authentication, MySQL-backed profiles, and simulated streaming. Implemented Java networking for real-time data retrieval, enhancing Java programming, database handling, and user authentication skills.',
+    tags: ['Java', 'JavaSwings', 'Java Networking', 'JDBC', 'MySQL']
   },
   {
-    name: 'Job Listings with Filtering',
-    repo: 'https://github.com/grazziotti/job-listings-with-filtering',
-    url: 'https://job-listings-with-filtering-khaki.vercel.app/',
+    name: 'My Contact',
+    repo: 'https://github.com/AnshpreetSingh32/MyContact.git',
+    url: false,
     image:
-      'https://i.ibb.co/47J3Fjt/Screenshot-2023-09-09-at-20-29-20-Frontend-Mentor-Job-Listings.png',
-    description: 'Local data listing with filtering.',
-    tags: ['react', 'typescript', 'bem']
-  },
-  {
-    name: 'ToDo App',
-    repo: 'https://github.com/grazziotti/todo-app',
-    url: 'https://grazziotti.github.io/todo-app/',
-    image:
-      'https://i.ibb.co/Wg5GvD2/Screenshot-2023-07-15-at-23-25-42-Frontend-Mentor-Todo-app.png',
-    description: 'A task list application.',
-    tags: ['html', 'css', 'javascript', 'bem']
-  },
-  {
-    name: 'Weather App',
-    repo: 'https://github.com/grazziotti/weather-app',
-    url: 'https://grazziotti.github.io/weather-app',
-    image:
-      'https://i.ibb.co/zhPsH8D/Screenshot-2023-09-09-at-21-02-56-Weather-App.png',
-    description:
-      'An application that provides updated weather information anywhere in the world.',
-    tags: ['html', 'css', 'javascript', 'api']
-  },
-  {
-    name: 'Rock-paper-scissors Game',
-    repo: 'https://github.com/grazziotti/rock-paper-scissors-game',
-    url: 'https://grazziotti.github.io/rock-paper-scissors-game/',
-    image:
-      'https://i.ibb.co/d7FczYy/Screenshot-2023-09-09-at-21-06-42-Frontend-Mentor-Rock-Paper-Scissors.png',
-    description: 'A classic rock-paper-scissors game available online.',
-    tags: ['html', 'css', 'javascript', 'bem']
+      '/assets/MyContact.jpg',
+    description: 'A console-based contact manager in C++ applying OOP principles. Includes add, edit, delete, and search functions with file handling to securely store and retrieve contact details efficiently.',
+    tags: ['C++', 'OOPs', 'File Handling']
   }
+  
 ]
 
 export const skillsData = [

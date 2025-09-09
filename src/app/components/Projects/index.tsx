@@ -30,7 +30,7 @@ const item = {
   }
 }
 
-const projectsPerPage = 4
+const projectsPerPage = 2
 const projectsIncrement = 4
 
 export const Projects = () => {

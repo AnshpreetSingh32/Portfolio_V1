@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import image from '../assets/About_Image.png'
+
 
 import { MotionDiv } from '../lib/motion'
 import { SectionContainer } from './SectionContainer'
@@ -43,7 +43,7 @@ export const About = () => {
         >
           <div className="relative w-80 h-96 md:w-80 md:h-96">
             <Image
-              src={image}
+              src="/assets/About_Image.png"
               alt="Anshpreet Singh - Full Stack Developer"
               fill
               className="object-contain"

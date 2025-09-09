@@ -22,14 +22,14 @@ const item = {
 
 export const ProjectCard = ({ projectData }: Props) => {
   return (
-    <MotionDiv className="relative flex flex-col gap-3 rounded-xl hover:shadow-md dark:hover:shadow-white sm:max-w-sm">
-      <div className="relative flex-col gap-4">
+    <MotionDiv className="relative flex flex-col gap-3 rounded-xl hover:shadow-md dark:hover:shadow-white sm:max-w-sm bg-secondary">
+      <div className="relative h-[280px] w-full">
         <Image
           src={projectData.image}
           alt={`${projectData.name} image`}
-          width={600}
-          height={280}
-          className="rounded-t-xl"
+          fill
+          sizes="(max-width: 640px) 100vw, 600px"
+          className="rounded-t-xl object-cover"
         />
         <MotionDiv
           initial="initial"
@@ -89,7 +89,7 @@ export const ProjectCard = ({ projectData }: Props) => {
       </div>
       <div className="flex flex-col gap-4 p-3">
         <h3 className="text-center text-2xl font-bold">{projectData.name}</h3>
-        <p className="text-lg">{projectData.description}</p>
+        <p className="text-lg text-center">{projectData.description}</p>
         <div className="flex flex-wrap gap-3">
           {projectData.tags.map((tag, index) => (
             <span

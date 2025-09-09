@@ -15,8 +15,8 @@ export const NavBar = () => {
         const headerHeightNumber = parseFloat(headerHeight)
 
         window.scrollTo({
-          top: section.offsetTop - headerHeightNumber, // Ajuste para a altura do header
-          behavior: 'smooth' // Rolagem suave
+          top: section.offsetTop - headerHeightNumber, 
+          behavior: 'smooth'
         })
       }
     }

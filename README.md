@@ -1,43 +1,88 @@
-# 📁 Portfolio
+# Anshpreet Singh - Personal Portfolio
 
-![](/public/screenshot.png)
+Welcome to the repository for my personal portfolio website. This project is a showcase of my skills, professional experience, and projects, built with a modern and responsive tech stack.
 
-## 📄 Descrição
+**Live Demo:** [your-portfolio-url.com](https://your-portfolio-url.com)
 
-Olá! Bem-vindo ao meu portfólio. Aqui é onde compartilho informações sobre mim, projetos e habilidades relacionadas ao desenvolvimento web. Utilizando tecnologias modernas, este projeto também é uma demonstração das minhas habilidades técnicas.
+![Portfolio Screenshot](./public/assets/screenshot.png)
 
-[Clique para acessar o projeto no ar](https://grazziotti-portfolio.vercel.app/)
+## ✨ Features
 
-## 🛠 Tecnologias Utilizadas
+- **Modern Tech Stack**: Built with Next.js 14 (App Router), TypeScript, and styled with Tailwind CSS.
+- **Fully Responsive**: A clean and accessible design that works seamlessly across desktops, tablets, and mobile devices.
+- **Dark/Light Mode**: User-friendly theme switcher that respects system preferences, powered by `next-themes`.
+- **Smooth Animations**: Engaging and fluid animations throughout the site using `Framer Motion`.
+- **Dynamic Content**: Project, skill, and experience data are loaded from a central file (`src/app/utils/data.ts`), making content updates simple and quick.
+- **Interactive UI**: Features like a typewriter effect in the hero section, animated skill icons, and custom-styled buttons with hover effects.
+- **Functional Contact Form**: Integrated with **EmailJS** to send messages directly from the portfolio to my inbox.
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Headless UI](https://headlessui.dev/)
-- [Lucide React](https://lucide.dev/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Commitlint](https://commitlint.js.org/)
-- [Commitizen](https://github.com/commitizen/cz-cli)
-- [Husky](https://github.com/typicode/husky)
+## 🚀 Tech Stack
 
-## 🚀 Como Executar
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **UI Components**: Headless UI, Lucide React (for icons)
+- **Contact Form**: EmailJS
+- **Linting & Formatting**: ESLint & Prettier
 
-```bash
-# Clone este repositório
-$ git clone https://github.com/grazziotti/portfolio
+## 🛠️ Getting Started
 
-# Entre no repositório clonado e instale as  dependências
-$ npm install
+To get a local copy up and running, follow these simple steps.
 
-# Execute o projeto
-$ npm run dev
+### Prerequisites
+
+Make sure you have Node.js (v18.17 or later) and npm installed on your machine.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AnshpreetSingh32/Portfolio_V1.git
+   cd Portfolio_V1
+   ```
+
+2. **Install NPM packages:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root of the project. You will need to add your EmailJS credentials, which you can get from your EmailJS account dashboard.
+
+   ```.env.local
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+   Open http://localhost:3000 with your browser to see the result.
+
+## 📂 Project Structure
+
+The project uses the Next.js App Router structure, which is organized as follows:
+
+```
+src/app/
+├── components/     # Reusable components (Header, Footer, Sections, etc.)
+├── lib/            # Shared library files (e.g., motion.ts for Framer Motion)
+├── utils/          # Utility functions and static data (e.g., data.ts, greetings.ts)
+├── globals.css     # Global styles
+├── layout.tsx      # Root layout of the application
+└── page.tsx        # The main page component
 ```
 
-## 👤 Autor
+## 📜 License
 
-<img style="border-radius: 50px" alt="Daniel Grazziotti" title="Daniel Grazziotti" src="https://avatars.githubusercontent.com/grazziotti" height="100" width="100" />
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-- [Linkedin](https://linkedin.com/in/daniel-grazziotti/)
+Feel free to copy, as there are no copyright issues.
+
+---
+
+Made with ❤️ by Anshpreet Singh. Feel free to connect with me!

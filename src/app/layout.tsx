@@ -1,19 +1,20 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Saira } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Saira } from "next/font/google";
 
-import Providers from './providers'
+import Providers from "./providers";
 
-const saira = Saira({ subsets: ['latin'] })
+const saira = Saira({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Anshpreet Singh',
-  description: 'Anshpreet Singh@apos Portfolio',
-}
+  title: "Portfolio | Anshpreet Singh",
+  description:
+    "Explore the projects and professional experience of Anshpreet Singh, a full-stack developer specializing in Next.js, React, and Node.js.",
+};
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -21,5 +22,5 @@ export default function RootLayout({
         <Providers>{children}</Providers>
       </body>
     </html>
-  )
+  );
 }

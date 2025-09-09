@@ -38,7 +38,7 @@ export const ThemeSwitcher = () => {
       <Menu.Button
         className={`${
           theme !== 'system' ? 'text-target' : ''
-        } flex items-center`}
+        } flex items-center hover:text-yellow-400`}
       >
         {resolvedTheme === 'light' ? <Sun /> : <MoonStar />}
       </Menu.Button>

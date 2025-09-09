@@ -6,6 +6,8 @@ import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
 import { SocialLinks } from './components/SocialLinks'
+import { Experience } from './components/Experience'
+import { Education } from './components/Education'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <main className="px-10 sm:px-6">
         <Hero />
         <About />
+        <Experience />
+        <Education />
         <Projects />
         <Skills />
         <Contact />

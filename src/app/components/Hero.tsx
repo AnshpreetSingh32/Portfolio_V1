@@ -1,5 +1,5 @@
 import { MotionDiv, MotionH1, MotionSpan } from '../lib/motion'
-import { ActionButtons, ActionButton } from './ActionButtons'
+import { ActionButtons } from './ActionButtons'
 import { Eye, FileText } from 'lucide-react'
 import { TypewriterLoop } from './custom/typewriter-loop'
 import { useMemo } from 'react'
@@ -77,7 +77,7 @@ export const Hero = () => {
                   label: 'Resume',
                   hoverText: '❯❯❯❯',
                   type: 'link',
-                  target: 'https://drive.google.com/your-resume-link',
+                  target: 'https://drive.google.com/file/d/1HdLBFkIEuRbs3en91NeNYP4sZMz6HDGg/view?usp=sharing',
                   icon: <FileText size={20} />
                 }
               ]}
