@@ -88,9 +88,9 @@ export const ProjectCard = ({ projectData }: Props) => {
         </div>
       </div>
       <div className="flex flex-col gap-4 p-3">
-        <h3 className="text-center text-2xl font-bold">{projectData.name}</h3>
+        <h3 className="text-center text-2xl font-bold underline decoration-target decoration-[1.6px]">{projectData.name}</h3>
         <p className="text-lg text-center">{projectData.description}</p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 justify-center">
           {projectData.tags.map((tag, index) => (
             <span
               className="rounded-3xl bg-target bg-opacity-20 px-2 py-1 text-sm font-bold text-target "

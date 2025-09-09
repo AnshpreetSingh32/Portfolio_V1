@@ -7,8 +7,7 @@ export const Logo = () => {
       <Image
         src="/assets/Name_Logo.png"
         alt="Logo - Anshpreet Singh"
-      
-        className="object-none"
+        className="h-auto w-auto object-contain"
         priority
         height={30}
         width={30}

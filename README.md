@@ -2,9 +2,6 @@
 
 Welcome to the repository for my personal portfolio website. This project is a showcase of my skills, professional experience, and projects, built with a modern and responsive tech stack.
 
-**Live Demo:** [your-portfolio-url.com](https://your-portfolio-url.com)
-
-![Portfolio Screenshot](./public/assets/screenshot.png)
 
 ## ✨ Features
 
@@ -24,7 +21,7 @@ Welcome to the repository for my personal portfolio website. This project is a s
 - **Animations**: Framer Motion
 - **UI Components**: Headless UI, Lucide React (for icons)
 - **Contact Form**: EmailJS
-- **Linting & Formatting**: ESLint & Prettier
+
 
 ## 🛠️ Getting Started
 
@@ -78,8 +75,6 @@ src/app/
 ```
 
 ## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 Feel free to copy, as there are no copyright issues.
 

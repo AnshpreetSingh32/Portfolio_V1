@@ -44,7 +44,36 @@ export const Projects = () => {
     if (isInView) {
       controls.start('visible')
     }
-  }, [isInView])
+  }, [isInView, controls])
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      const header = document.querySelector('header')
+      if (header) {
+        const headerHeight = window.getComputedStyle(header).height
+        const headerHeightNumber = parseFloat(headerHeight)
+        window.scrollTo({
+          top: section.offsetTop - headerHeightNumber,
+          behavior: 'smooth'
+        })
+      }
+    }
+  }
+
+  const handleToggleProjects = () => {
+    if (showMore) {
+      // First, hide the projects. This will cause the layout to change.
+      setShowMore(false)
+      // Then, after a very short delay to allow the DOM to update and stabilize,
+      // scroll to the skills section.
+      setTimeout(() => {
+        scrollToSection('skills')
+      }, 100) // A small delay to ensure the DOM has updated
+    } else {
+      setShowMore(true)
+    }
+  }
 
   return (
     <SectionContainer id="projects" title="Projects">
@@ -89,7 +118,7 @@ export const Projects = () => {
         >
           <button
             className="flex items-center gap-x-2 rounded-lg text-lg transition hover:bg-opacity-80 hover:text-target"
-            onClick={() => setShowMore(!showMore)}
+            onClick={handleToggleProjects}
           >
             Show {showMore ? 'Less' : 'More'}{' '}
             <MoveDown

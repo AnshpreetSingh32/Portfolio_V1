@@ -61,7 +61,7 @@ export const projectsData: projectType[] = [
     repo: 'https://github.com/AnshpreetSingh32/MyContact.git',
     url: false,
     image:
-      '/assets/MyContact.jpg',
+      '/assets/MyContact.png',
     description: 'A console-based contact manager in C++ applying OOP principles. Includes add, edit, delete, and search functions with file handling to securely store and retrieve contact details efficiently.',
     tags: ['C++', 'OOPs', 'File Handling']
   }

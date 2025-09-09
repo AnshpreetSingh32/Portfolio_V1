@@ -16,7 +16,7 @@ export const Experience = () => {
       logo: '/assets/FidelityLogo.png',
       technicalScope: 'React.js, Node.js, Git, MySQL, Service Now, Nexthink, Active Directory, IAM, Jira, Confluence',
       responsibilities: [
-        'Developed and deployed the Nex-Migrate web portal supporting Windows 11 migration workflows for 200+ enterprise users, with seamless ServiceNow API integration.', 'Supported enterprise device readiness initiatives and gained hands-on exposure to frontend technologies, service automation, and enterprise security practices including IAM and access control systems'
+        'Developed and deployed the Nex-Migrate web portal supporting Windows 11 migration workflows for 200+ enterprise users, with seamless ServiceNow API integration.', 'Supported enterprise device readiness initiatives and gained hands-on exposure to frontend technologies, service automation, and enterprise security practices including IAM and access control systems.'
       ]
     }
   ]
