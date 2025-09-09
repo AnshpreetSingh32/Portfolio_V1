@@ -41,7 +41,7 @@ export const projectsData: projectType[] = [
   {
     name: 'Personal Portfolio',
     repo: 'https://github.com/AnshpreetSingh32/Portfolio_V1.git',
-    url: 'https://github.com/AnshpreetSingh32/Portfolio_V1.git',
+    url: 'https://anshpreet-singh.netlify.app/',
     image:
       '/assets/Portfolio_Image.png',
     description: 'A modern portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Headless UI. Showcases projects, skills, and experience with smooth animations, responsive design, and an engaging user interface.',
