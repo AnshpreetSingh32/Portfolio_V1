@@ -1,21 +1,11 @@
-import { MotionDiv } from '../lib/motion'
+import { MotionDiv } from "../lib/motion";
 
-import { Github, Linkedin } from 'lucide-react'
+import { CopyrightIcon } from "lucide-react";
 
-const iconSize = { width: 28, height: 28 }
-
-const socialData = [
-  {
-    link: 'https://github.com/AnshpreetSingh32',
-    icon: <Github width={iconSize.width} height={iconSize.height} />
-  },
-  {
-    link: 'https://www.linkedin.com/in/Anshpreetsingh32',
-    icon: <Linkedin width={iconSize.width} height={iconSize.height} />
-  }
-]
+const iconSize = { width: 28, height: 28 };
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="px-10 sm:px-6">
       <MotionDiv
@@ -25,28 +15,23 @@ export const Footer = () => {
         transition={{ delay: 0.5, duration: 0.3 }}
         variants={{
           hidden: { opacity: 0 },
-          visible: { opacity: 1 }
+          visible: { opacity: 1 },
         }}
-        className="mx-auto flex w-full max-w-5xl items-center justify-between border-t hover:border-target py-4 text-lg sm:flex-col sm:gap-y-6"
+        className="flex justify-center mx-auto w-full max-w-5xl border-t hover:border-target py-4 text-lg"
       >
-        <div className='flex flex-col gap-2 text-md text-center sm:text-left'>
-        <p>Made with ❤️ from INDIA</p>
-        <p>No &copy; issues, Feel free to copy</p>
-        </div>
-        <div className="flex items-center gap-4">
-          {socialData.map((social, index) => (
-            <a
-              key={index}
-              className="transition hover:-translate-y-1 hover:text-target"
-              target="_blank"
-              href={social.link}
-              rel="noreferrer"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+        <p className="flex sm:flex-col item-center gap-1">
+          <span className="flex flex-row gap-1">
+            <span className="mt-0.5">
+              <CopyrightIcon />
+            </span>
+            {new Date().getFullYear()}
+            <span className="text-target">Anshpreet Singh.</span>
+          </span>
+          <span className="text-center">
+            All rights reserved.
+            </span>
+        </p>
       </MotionDiv>
     </footer>
-  )
-}
+  );
+};
