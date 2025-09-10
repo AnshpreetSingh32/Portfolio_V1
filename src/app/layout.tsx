@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={saira.className}>
+      <body className={saira.className} suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>

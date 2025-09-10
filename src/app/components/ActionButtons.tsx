@@ -31,7 +31,7 @@ export const ActionButtons = ({ buttons }: ActionButtonsProps) => {
   return (
     <div className="flex gap-4 mt-6 flex-wrap">
   {buttons.map((btn, index) => (
-        <button
+        <button suppressHydrationWarning
           key={index}
           onClick={() => {
             if (btn.type === 'scroll') {

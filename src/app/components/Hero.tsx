@@ -1,15 +1,22 @@
+'use client'
+
 import { MotionDiv, MotionH1, MotionSpan } from '../lib/motion'
 import { ActionButtons } from './ActionButtons'
 import { Eye, FileText } from 'lucide-react'
 import { TypewriterLoop } from './custom/typewriter-loop'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { greeting, visitors } from '../utils/greetings'
 
 export const Hero = () => {
+  const [greet, setGreet] = useState<string>('')
   const visitor = useMemo(
     () => visitors[Math.floor(Math.random() * visitors.length)],
     []
   );
+
+  useEffect(() => {
+    setGreet(greeting())
+  }, [])
   return (
     <section id="home">
       <MotionDiv className="mx-auto max-w-5xl">
@@ -23,8 +30,9 @@ export const Hero = () => {
               duration: 0.4
             }}
             className="flex flex-col mb-2 text-2xl font-medium tracking-widest text-left self-start underline underline-offset-4 decoration-1 decoration-target/70"
+            suppressHydrationWarning
           >
-            {`${greeting()}, ${visitor}`}
+            {greet ? `${greet}, ${visitor}` : visitor}
           </MotionSpan>
           <MotionH1
             initial={{ opacity: 0, x: 40 }}

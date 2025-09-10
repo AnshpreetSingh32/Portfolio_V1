@@ -117,6 +117,7 @@ export const Projects = () => {
           className="border-t-1 mt-14 flex justify-center"
         >
           <button
+            suppressHydrationWarning
             className="flex items-center gap-x-2 rounded-lg text-lg transition hover:bg-opacity-80 hover:text-target"
             onClick={handleToggleProjects}
           >

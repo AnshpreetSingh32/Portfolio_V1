@@ -143,6 +143,7 @@ export const Contact = () => {
                   Full Name
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="text"
                   id="name"
                   name="name"
@@ -159,6 +160,7 @@ export const Contact = () => {
                   Email Address
                 </label>
                 <input
+                  suppressHydrationWarning
                   type="email"
                   id="email"
                   name="email"
@@ -175,6 +177,7 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  suppressHydrationWarning
                   id="message"
                   name="message"
                   value={formData.message}
@@ -187,6 +190,7 @@ export const Contact = () => {
               </div>
               
               <button
+                suppressHydrationWarning
                 type="submit"
                 className="w-full bg-target hover:bg-target/90 font-medium py-3 px-6 rounded-lg transition-colors duration-200 "
               >
