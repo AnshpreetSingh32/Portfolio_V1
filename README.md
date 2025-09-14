@@ -76,7 +76,9 @@ src/app/
 
 ## 📜 License
 
-Feel free to copy, as there are no copyright issues.
+© 2025 Anshpreet Singh. All rights reserved.  
+
+This project is licensed for personal and educational purposes.
 
 ---
 
