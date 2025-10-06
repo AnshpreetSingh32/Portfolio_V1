@@ -37,10 +37,12 @@ export const ThemeSwitcher = () => {
     <Menu as="div" className="relative">
       <Menu.Button
         className={`${
-          theme !== 'system' ? 'text-target' : ''
+          theme === 'light' || theme === 'dark' || theme === 'system'
+            ? 'text-target'
+            : ''
         } flex items-center hover:text-yellow-400`}
       >
-        {resolvedTheme === 'light' ? <Sun /> : <MoonStar />}
+        {theme === 'system' ? <Monitor /> : resolvedTheme === 'light' ? <Sun /> : <MoonStar />}
       </Menu.Button>
       <Transition
         as={Fragment}
@@ -61,14 +63,13 @@ export const ThemeSwitcher = () => {
                 onClick={() => {
                   const newTheme = themeInfo.label.toLowerCase()
                   setTheme(newTheme)
-                  if (newTheme === 'dark') {
+                  if (newTheme === 'dark' || (newTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark')
                   } else {
                     document.documentElement.classList.remove('dark')
                   }
                 }}
                 className={`${
-                  themeInfo.label.toLowerCase() !== 'system' &&
                   theme === themeInfo.label.toLowerCase()
                     ? 'text-target'
                     : ''
