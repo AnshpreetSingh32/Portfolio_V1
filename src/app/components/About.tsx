@@ -20,7 +20,7 @@ export const About = () => {
         >
           <p>
             Hello, I'm <span className='text-target'>Anshpreet Singh</span>. I'm a passionate full-stack developer
-            and Computer Science student. I build projects using Next.js and Node.js, and have internship experience from
+            and Computer Science graduate. I build projects using Next.js and Node.js, and have internship experience from
             Fidelity International.
           </p>
 

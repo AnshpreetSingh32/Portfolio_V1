@@ -85,7 +85,7 @@ export const Hero = () => {
                   label: 'Resume',
                   hoverText: '❯❯❯❯',
                   type: 'link',
-                  target: 'https://drive.google.com/file/d/1uvgRHpsraqyvCDaNByO4lHWTIbzkvRtI/view?usp=sharing',
+                  target: 'https://drive.google.com/file/d/1fVSgjWGhfFS6PgPiAd1IXJUF6q-abbuF/view?usp=sharing',
                   icon: <FileText size={20} />
                 }
               ]}
